@@ -1,0 +1,100 @@
+<head> </head>
+<body>
+  <div
+    id="apimages"
+    class="inline_flex max_height projets_details hide flex bg_purple"
+  >
+    <!-- API Images -->
+    <div class="inline_flex p_projet shadow_purple bg_purple card_detail">
+      <!-- Titre -->
+      <div class="content_card p_card">
+        <h3 class="titre_projet bg_purple t_card">
+          <img
+            class="logo"
+            src="asset/projets/logo_photo.png"
+            alt="logo d'API Images"
+          />API Images
+        </h3>
+        <img
+          class="img_pLaceHorlder"
+          src="asset/projets/apiimage.png"
+          alt="Présentations d'API Images"
+        />
+      </div>
+
+      <!-- Taches effectués -->
+      <div class="m_10">
+        <div class="lien_contact">
+          <div class="icone_left bg_black borderL">
+            <svg
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>GitHub</title>
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              />
+            </svg>
+          </div>
+          <a target="_blank" href="https://github.com/abondiaye"
+            >Abdoulmlec/api_images</a
+          >
+        </div>
+        <h4>Tâches effectuées</h4>
+        <p>
+          Site conçu avec le framework Symfony sous forme d'API. L'idée est de
+          permettre d'ajouter des images temporaires pendant le développement
+          d'un site. Il suffit d'appeler l'url dans la source d'une balise image
+          pour avoir une image aléatoire suivant la catégorie choisie.
+        </p>
+      </div>
+      <!-- Stack -->
+      <div class="m_10 stack">
+        <h4>Stack</h4>
+        <img
+          src="https://img.shields.io/badge/Framework-Symphony-blueviolet?style=flat&logo=symfony&color=000000"
+          alt="symfony"
+        />
+        <img
+          src="https://img.shields.io/badge/Code-Twig-brightgreen?style=flat&logo=Twig&color=AFC97E"
+          alt="Twig"
+        />
+        <img
+          src="https://img.shields.io/badge/Code-JSONWebToken-blueviolet?style=flat&logo=JSONWebTokens&color=000000"
+          alt="JSONWebToken"
+        />
+        <img
+          src="https://img.shields.io/badge/Code-MySQL-blueviolet?style=flat&logo=MySQL&color=4479A1"
+          alt="MySQL"
+        />
+      </div>
+    </div>
+    <!-- Description -->
+    <div class="texte">
+      <h1 class="center">API d'images aléatoires</h1>
+      <p class="w_7">
+        L'idée est venue en développant des sites et en cherchant des images de
+        substitutions en attendant les vrais assets.
+      </p>
+      <p class="w_7 mt_50">
+        Pour ce faire j'ai utilisé
+        <a target="_blank" href="https://symfony.com/">Symfony</a>. En tant
+        qu'administrateur on peut mettre en base de données des images avec un
+        tag pour l'identifier. Ensuite les utilisateurs ont juste à mettre la
+        route API dans leur balise img pour récupérer une image souhaitée.
+      </p>
+      <p class="w_7 mt_50">
+        En utilisant la route www.api_images/photo/animal, l'API renverra
+        aléatoirement une image parmi celles qui ont le tag animal. Le
+        navigateur renverra ensuite cette même image pour les autres appels à
+        cette même url.
+      </p>
+      <p class="w_7 mt_50">
+        Pour avoir des images différentes il faudra alors appeler la route
+        www.api_images/photo/animal/{id}, qui renverra une image unique et qui
+        permettra d'avoir de différentes images sur le site en développement.
+      </p>
+    </div>
+  </div>
+</body>
