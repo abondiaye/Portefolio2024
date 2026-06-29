@@ -1,0 +1,46 @@
+<head>
+</head>
+<body>
+    <div id="meteo" class="hide grid">
+        <!--  Titre -->
+        <div class="titre_app bg_purple">
+            <div>
+                <img class="logo_calcul" src="asset/bureau/meteo.png" alt="logo calculette">
+            </div>
+            <span>Météo</span>
+            <button id="close_meteo" class="btn btn_clause">X</button>
+        </div>
+        <!-- Icone temps -->
+        <div>
+            <h2 id="villeMeteo">Paris</h2>
+            <p>
+                Le <span id="dateNow"></span><br>
+                <img id="logoTemp" src="" alt="logo temps aujourd'hui"><br>
+                <span id="descriptionTemps">pluvieux</span><br>
+                <span id="temperature">20°C</span>
+            </p>
+            <p>
+                Min. <span id="temperatureMin">10°C</span> - Max. <span id="temperatureMax">25°C</span>
+            </p>   
+        </div>
+        <div class="grid2">
+            <div class="vignette">
+                <p>
+                    Hummidité <br>
+                     <span id="humiditer">26% </span> 
+                </p>
+            </div>
+            <div class="vignette">
+                <p>
+                    Vent <span id="vent">26Km/h </span> 
+                </p>
+                <div id="arrow"></div>
+            </div>
+        </div>
+        <div>
+            <p class="muted">données fournies par <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWheatherMap</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
