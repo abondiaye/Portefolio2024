@@ -1,37 +1,40 @@
 //  SWIPER
-const swiper = new Swiper('.swiper', {
-  spaceBetween: 10,
-  // loop: true,
-  grabCursor: true,
-  clickable: true,
-  // mousewheel:{
-  //   forceToAxis: true,
-  // },
-  
-  breakpoints: {
-      "@0.00": {
-        slidesPerView: 1.5,
-      },
-      "@0.75": {
-        slidesPerView: 2.5,
-      },
-      "@1.00": {
-        slidesPerView: 3.5,
-      },
-      "@1.50": {
-        slidesPerView: 4.5,
-      },
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+// Un Swiper par carrousel (new Swiper('.swiper', ...) n'initialisait que le premier)
+document.querySelectorAll('.swiper').forEach(function (el) {
+  new Swiper(el, {
+    spaceBetween: 10,
+    // loop: true,
+    grabCursor: true,
+    clickable: true,
+    // mousewheel:{
+    //   forceToAxis: true,
+    // },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+    breakpoints: {
+        "@0.00": {
+          slidesPerView: 1.5,
+        },
+        "@0.75": {
+          slidesPerView: 2.5,
+        },
+        "@1.00": {
+          slidesPerView: 3.5,
+        },
+        "@1.50": {
+          slidesPerView: 4.5,
+        },
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: el.querySelector('.swiper-button-next'),
+      prevEl: el.querySelector('.swiper-button-prev'),
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: el.querySelector('.swiper-scrollbar'),
+    },
+  });
 });
 
 nav_home = document.getElementById('nav-home');
@@ -87,10 +90,6 @@ route = [
   "contact"],
   [
     "portfolio",
-    "Green Touch",
-    "devin",
-    "apimages",
-    "saveworld",
   ]
 ];
 
@@ -648,7 +647,8 @@ envoyer_mail.addEventListener("click", function() {
   var url = "php/mail.php";
   emails = email.value;
   message = contact_fin.value;
-  var params = "email=" + emails + "&message=" + message;
+  demandeCv = document.getElementById('demande_cv').checked ? "1" : "0";
+  var params = "email=" + encodeURIComponent(emails) + "&message=" + encodeURIComponent(message) + "&demande_cv=" + demandeCv;
 
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -658,6 +658,7 @@ envoyer_mail.addEventListener("click", function() {
       // alert(xhr.responseText);
       email.value = ""
       contact_fin.value = ""
+      document.getElementById('demande_cv').checked = false
       if(xhr.responseText == "Votre message c'est bien envoyé"){
         document.getElementById('alert').classList.add('success')
         document.getElementById('alert').classList.remove('danger')

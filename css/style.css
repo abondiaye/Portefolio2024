@@ -161,6 +161,17 @@ footer {
   width: 100%;
   height: 100%;
 }
+/* Pluie de code futuriste */
+#matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.25;
+}
 #alert {
   position: fixed;
   border-radius: 5px;
@@ -1185,7 +1196,7 @@ li {
 .titre_formation {
   position: relative;
   left: 20px;
-  margin-top: 15px;
+  margin-top: 95px;
   width: 70%;
   text-align: center;
 }
@@ -1212,41 +1223,62 @@ li {
   margin: auto;
 }
 .img_hobbies {
-  position: relative;
-  top: -70px;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 0;
   border-radius: 5px 0 0 5px;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.95;
+  transition: 0.4s ease transform;
+}
+.p_hobbies:hover .img_hobbies {
+  transform: scale(1.06);
 }
 .titre_hobbies {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   z-index: 2;
   text-align: center;
-  margin-top: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-radius: 5px 0 0 0;
-  background-color: var(--black--alpha);
-  color: var(--main-color);
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0)
+  );
+  color: white;
+  font-size: 18px;
 }
 .p_hobbies {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 320px 1fr;
   border-radius: 5px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-section);
+  transition: 0.3s ease box-shadow, 0.3s ease transform;
+}
+.p_hobbies:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow-section-color);
 }
 .photo_hobbie {
   height: 271px;
-  border-radius: 5px;
-  box-shadow: var(--box-shadow-section);
   position: relative;
   z-index: 4;
+  overflow: hidden;
+}
+.swip {
+  padding: 10px 20px;
 }
 .swip > p {
   margin: 0;
-  padding: 16px;
+  padding: 16px 0;
   margin-bottom: 1px;
 }
 .gridR2 {
@@ -1417,10 +1449,6 @@ li {
     width: 60vw;
     max-width: 60vw;
   }
-  .p_hobbies {
-    display: grid;
-    grid-template-columns: 10% 90%;
-  }
   .texte {
     max-height: 70vh;
   }
@@ -1460,14 +1488,16 @@ li {
     width: max-content;
   }
   .photo_hobbie {
-    max-height: 300px;
-    height: auto;
+    max-height: 220px;
+    height: 220px;
     width: 100%;
   }
   .p_hobbies {
     display: flex;
+    flex-direction: column;
     grid-template-columns: unset;
     max-width: 450px;
+    margin: 20px auto;
   }
   nav ul li {
     font-size: 15px;
@@ -1612,6 +1642,9 @@ li {
   }
   #home .flex_home:nth-child(4) {
     order: 3;
+  }
+  #matrix-rain {
+    opacity: 0.15;
   }
 }
 

@@ -1,10 +1,10 @@
-https://www.cllc.ovh/#home
-https://www.cllc.ovh/#projets
-https://www.cllc.ovh/#formations
-https://www.cllc.ovh/#hobbies
-https://www.cllc.ovh/#contact
-https://www.cllc.ovh/#projets#portfolio
-https://www.cllc.ovh/#projets#Green Touch
-https://www.cllc.ovh/#projets#devin
-https://www.cllc.ovh/#projets#apimages
-https://www.cllc.ovh/#projets#saveworld
+https://votre-domaine.fr/#home
+https://votre-domaine.fr/#projets
+https://votre-domaine.fr/#formations
+https://votre-domaine.fr/#hobbies
+https://votre-domaine.fr/#contact
+https://votre-domaine.fr/#projets#portfolio
+https://votre-domaine.fr/#projets#Green Touch
+https://votre-domaine.fr/#projets#devin
+https://votre-domaine.fr/#projets#apimages
+https://votre-domaine.fr/#projets#saveworld
