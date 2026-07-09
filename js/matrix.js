@@ -33,7 +33,7 @@
     ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "#2ee323";
+    ctx.fillStyle = "#ed1b76";
     ctx.font = fontSize + "px monospace";
 
     for (var i = 0; i < drops.length; i++) {

@@ -70,7 +70,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matc
 }
 
 main_color = "white";
-primary = "#08af0d";
+primary = "#ed1b76";
 if(light){
   main_color = "black";
   primary = "#3c3fde";

@@ -4,9 +4,9 @@
   --mainAlpha-bg-color: #202124e9;
   --tertiary-bg-color: #242323;
   --main-color: white;
-  --green-color: #08af0d;
-  --green-color-visited: #46a249;
-  --green-color-alpha: #2f4b30;
+  --green-color: #ed1b76;
+  --green-color-visited: #b01258;
+  --green-color-alpha: #4b1230;
   --red-color-alpha: #4d2c2c;
   --muted-color: #dadae7;
   /* --black--alpha: #00000093; */
@@ -532,11 +532,13 @@ li {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
   border-radius: 100%;
   box-shadow: 2px 2px 5px rgba(125, 126, 125, 0.274);
-  width: 20vw;
-  height: 20vw;
+  width: 8vw;
+  height: 8vw;
   object-fit: cover;
-  min-width: 300px;
-  min-height: 300px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 130px;
+  max-height: 130px;
   margin: auto;
   z-index: 3;
 }
