@@ -1405,19 +1405,46 @@
             <p>je suis à votre disposition pour plus d'informations.</p>
             <!-- Loader Squid Game -->
             <div class="squid-game">
+              <!-- Cercle -->
               <div class="loader">
                 <svg viewBox="0 0 80 80">
-                  <circle id="sq-loader-circle" cx="40" cy="40" r="32"></circle>
+                  <defs>
+                    <path id="circle-path" d="M40,8 A32,32 0 1,1 39.99,8"/>
+                  </defs>
+                  <circle cx="40" cy="40" r="32"></circle>
+                  <circle class="dot" cx="0" cy="0" r="4" fill="white">
+                    <animateMotion dur="3s" repeatCount="indefinite">
+                      <mpath href="#circle-path"/>
+                    </animateMotion>
+                  </circle>
                 </svg>
               </div>
+              <!-- Triangle -->
               <div class="loader triangle">
                 <svg viewBox="0 0 80 80">
+                  <defs>
+                    <path id="triangle-path" d="M43,8 L79,72 L7,72 Z"/>
+                  </defs>
                   <polygon points="43 8 79 72 7 72"></polygon>
+                  <circle class="dot" cx="0" cy="0" r="4" fill="white">
+                    <animateMotion dur="3s" repeatCount="indefinite" begin="1s">
+                      <mpath href="#triangle-path"/>
+                    </animateMotion>
+                  </circle>
                 </svg>
               </div>
+              <!-- Carré -->
               <div class="loader">
                 <svg viewBox="0 0 80 80">
+                  <defs>
+                    <path id="square-path" d="M8,8 L72,8 L72,72 L8,72 Z"/>
+                  </defs>
                   <rect x="8" y="8" width="64" height="64"></rect>
+                  <circle class="dot" cx="0" cy="0" r="4" fill="white">
+                    <animateMotion dur="3s" repeatCount="indefinite" begin="2s">
+                      <mpath href="#square-path"/>
+                    </animateMotion>
+                  </circle>
                 </svg>
               </div>
             </div>

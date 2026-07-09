@@ -1657,15 +1657,16 @@ li {
 /* ── SQUID GAME LOADER (section Contact) ── */
 .squid-game {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
-  padding: 20px 0 8px;
+  padding: 28px 0 10px;
 }
 
 .squid-game .loader {
-  width: 52px;
-  height: 52px;
+  width: 80px;
+  height: 80px;
+  position: relative;
 }
 
 .squid-game .loader svg {
@@ -1673,15 +1674,16 @@ li {
   height: 100%;
   fill: none;
   stroke: #ed1b76;
-  stroke-width: 5;
+  stroke-width: 7;
+  stroke-linecap: round;
   overflow: visible;
 }
 
 /* Circle — périmètre 2π×32 ≈ 201 */
-#sq-loader-circle {
+.squid-game .loader:nth-child(1) circle:first-child {
   stroke-dasharray: 201;
   stroke-dashoffset: 201;
-  animation: sqDrawCircle 1.8s ease-in-out infinite;
+  animation: sqDraw 3s ease-in-out infinite;
 }
 
 /* Triangle — périmètre ≈ 219 */
@@ -1689,30 +1691,25 @@ li {
   stroke-dasharray: 219;
   stroke-dashoffset: 219;
   stroke-linejoin: round;
-  animation: sqDrawTriangle 1.8s ease-in-out infinite;
-  animation-delay: 0.35s;
+  animation: sqDraw 3s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 /* Square — périmètre 4×64 = 256 */
 .squid-game .loader:last-child rect {
   stroke-dasharray: 256;
   stroke-dashoffset: 256;
-  animation: sqDrawSquare 1.8s ease-in-out infinite;
-  animation-delay: 0.7s;
+  animation: sqDraw 3s ease-in-out infinite;
+  animation-delay: 2s;
 }
 
-@keyframes sqDrawCircle {
-  0%        { stroke-dashoffset: 201; opacity: 1; }
-  55%       { stroke-dashoffset: 0;   opacity: 1; }
-  80%, 100% { stroke-dashoffset: 0;   opacity: 0; }
+@keyframes sqDraw {
+  0%        { stroke-dashoffset: var(--p, 256); opacity: 1; }
+  60%       { stroke-dashoffset: 0; opacity: 1; }
+  85%, 100% { stroke-dashoffset: 0; opacity: 0; }
 }
-@keyframes sqDrawTriangle {
-  0%        { stroke-dashoffset: 219; opacity: 1; }
-  55%       { stroke-dashoffset: 0;   opacity: 1; }
-  80%, 100% { stroke-dashoffset: 0;   opacity: 0; }
-}
-@keyframes sqDrawSquare {
-  0%        { stroke-dashoffset: 256; opacity: 1; }
-  55%       { stroke-dashoffset: 0;   opacity: 1; }
-  80%, 100% { stroke-dashoffset: 0;   opacity: 0; }
-}
+
+/* Cercle — override la variable --p */
+.squid-game .loader:nth-child(1) circle:first-child { --p: 201; }
+.squid-game .triangle polygon                        { --p: 219; }
+.squid-game .loader:last-child rect                  { --p: 256; }
