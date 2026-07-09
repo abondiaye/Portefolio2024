@@ -1679,6 +1679,12 @@ li {
   overflow: visible;
 }
 
+.squid-game .loader svg .dot {
+  fill: white;
+  stroke: none;
+  r: 5;
+}
+
 /* Circle — périmètre 2π×32 ≈ 201 */
 .squid-game .loader:nth-child(1) circle:first-child {
   stroke-dasharray: 201;
