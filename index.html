@@ -109,7 +109,9 @@
         </defs>
         <text id="sq-name1" x="410" y="130" text-anchor="middle"
           font-family="'Black Han Sans','Arial Black',Arial,sans-serif"
-          font-size="118" fill="white" opacity="0">N'DIAYE</text>
+          font-size="118" fill="white" opacity="0">
+          <tspan id="ln-N">N'</tspan><tspan id="ln-D">D</tspan><tspan id="ln-I">I</tspan><tspan id="ln-A">A</tspan><tspan id="ln-Y">Y</tspan><tspan id="ln-E">E</tspan>
+        </text>
         <circle id="sq-c1" cx="188" cy="268" r="52" fill="none" stroke="white" stroke-width="11" stroke-dasharray="327" stroke-dashoffset="-328"/>
         <circle id="sq-c2" cx="188" cy="268" r="52" fill="none" stroke="white" stroke-width="11" stroke-dasharray="1100" stroke-dashoffset="467" opacity="0"/>
         <g id="sq-tri" filter="url(#sq-shadow)">
@@ -125,7 +127,9 @@
         </g>
         <text id="sq-name2" x="410" y="460" text-anchor="middle"
           font-family="'Black Han Sans','Arial Black',Arial,sans-serif"
-          font-size="88" fill="white" opacity="0">Abdoulaye</text>
+          font-size="88" fill="white" opacity="0">
+          <tspan id="ln-Ab">A</tspan><tspan id="ln-b">b</tspan><tspan id="ln-d">d</tspan><tspan id="ln-o">o</tspan><tspan id="ln-u">u</tspan><tspan id="ln-l">l</tspan><tspan id="ln-a">a</tspan><tspan id="ln-y2">y</tspan><tspan id="ln-e">e</tspan>
+        </text>
         <text id="sq-sub" x="410" y="492" text-anchor="middle"
           font-family="Arial,sans-serif" font-size="11"
           fill="rgba(255,255,255,0)" letter-spacing="2">TECHNICIEN SUPPORT IT N1-N2  ·  DÉVELOPPEUR WEB</text>
@@ -171,7 +175,12 @@
       tl.to("#sq-name2", { opacity:1, duration:1 }, 3.8);
       tl.to("#sq-c2,#sq-rt,#sq-rb,#sq-rr,#sq-rl", { stroke:red, duration:2.5, ease:"power2.inOut" }, 4.5);
       tl.to("#sq-tl,#sq-tr,#sq-tb", { stroke:red, duration:2.5, ease:"power2.inOut" }, 4.5);
-      tl.to("#sq-name1,#sq-name2", { fill:red, duration:2, ease:"power2.inOut" }, 5.5);
+      /* N'DIAYE : N'=blanc, D=rouge, I=blanc, A=rouge, Y=blanc, E=rouge */
+  tl.to("#ln-N, #ln-I, #ln-Y", { fill:"white", duration:1.5, ease:"power2.inOut" }, 5.5);
+  tl.to("#ln-D, #ln-A, #ln-E", { fill:red,     duration:1.5, ease:"power2.inOut" }, 5.5);
+  /* Abdoulaye : A=rouge, b=blanc, d=rouge, o=blanc, u=rouge, l=blanc, a=rouge, y=blanc, e=rouge */
+  tl.to("#ln-Ab, #ln-d, #ln-u, #ln-a, #ln-e", { fill:red,     duration:1.5, ease:"power2.inOut" }, 5.5);
+  tl.to("#ln-b,  #ln-o, #ln-l, #ln-y2",        { fill:"white", duration:1.5, ease:"power2.inOut" }, 5.5);
       tl.to("#sq-deco", { attr:{ x2:720, y1:472, y2:472 }, duration:1.2, ease:"power1.out" }, 5.8);
       tl.to("#sq-sub", { fill:"rgba(255,255,255,0.45)", duration:1 }, 6.2);
 
