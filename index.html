@@ -98,7 +98,7 @@
 
     <!-- ══ INTRO SQUID GAME ══ -->
     <div id="squid-intro">
-      <svg id="sq-svg" viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg">
+      <svg id="sq-svg" viewBox="0 0 820 510" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="sq-shadow">
             <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
@@ -123,13 +123,13 @@
           <line id="sq-rb" x1="580" y1="360" x2="580" y2="360" stroke="white" stroke-width="11" stroke-linecap="round"/>
           <line id="sq-rl" x1="580" y1="175" x2="580" y2="175" stroke="white" stroke-width="11" stroke-linecap="round"/>
         </g>
-        <text id="sq-name2" x="410" y="415" text-anchor="middle"
+        <text id="sq-name2" x="410" y="460" text-anchor="middle"
           font-family="'Black Han Sans','Arial Black',Arial,sans-serif"
           font-size="88" fill="white" opacity="0">Abdoulaye</text>
-        <text id="sq-sub" x="410" y="448" text-anchor="middle"
+        <text id="sq-sub" x="410" y="492" text-anchor="middle"
           font-family="Arial,sans-serif" font-size="11"
           fill="rgba(255,255,255,0)" letter-spacing="2">TECHNICIEN SUPPORT IT N1-N2  ·  DÉVELOPPEUR WEB</text>
-        <line id="sq-deco" x1="100" y1="426" x2="100" y2="426" stroke="rgba(237,27,118,0.35)" stroke-width="1"/>
+        <line id="sq-deco" x1="100" y1="472" x2="100" y2="472" stroke="rgba(237,27,118,0.35)" stroke-width="1"/>
       </svg>
       <button class="skip-btn" onclick="skipIntro()">Passer ›</button>
     </div>
@@ -172,7 +172,7 @@
       tl.to("#sq-c2,#sq-rt,#sq-rb,#sq-rr,#sq-rl", { stroke:red, duration:2.5, ease:"power2.inOut" }, 4.5);
       tl.to("#sq-tl,#sq-tr,#sq-tb", { stroke:red, duration:2.5, ease:"power2.inOut" }, 4.5);
       tl.to("#sq-name1,#sq-name2", { fill:red, duration:2, ease:"power2.inOut" }, 5.5);
-      tl.to("#sq-deco", { attr:{ x2:720 }, duration:1.2, ease:"power1.out" }, 5.8);
+      tl.to("#sq-deco", { attr:{ x2:720, y1:472, y2:472 }, duration:1.2, ease:"power1.out" }, 5.8);
       tl.to("#sq-sub", { fill:"rgba(255,255,255,0.45)", duration:1 }, 6.2);
 
       function endIntro() {
