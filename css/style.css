@@ -1224,64 +1224,151 @@ li {
   width: 30px;
   margin: auto;
 }
-.img_hobbies {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  border-radius: 5px 0 0 5px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.95;
-  transition: 0.4s ease transform;
-}
-.p_hobbies:hover .img_hobbies {
-  transform: scale(1.06);
-}
-.titre_hobbies {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  text-align: center;
-  margin: 0;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0)
-  );
-  color: white;
-  font-size: 18px;
-}
+/* ════════════════════════════════
+   HOBBIES — Design Futuriste
+   ════════════════════════════════ */
+
+#hobbies { counter-reset: hobbyCount; }
+
 .p_hobbies {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: var(--box-shadow-section);
-  transition: 0.3s ease box-shadow, 0.3s ease transform;
-}
-.p_hobbies:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--box-shadow-section-color);
-}
-.photo_hobbie {
-  height: 271px;
+  grid-template-columns: 300px 1fr;
   position: relative;
-  z-index: 4;
+  margin-bottom: 3px;
+  border-radius: 0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.88);
+  border-left: 3px solid #ed1b76;
+  border-top: 1px solid rgba(237,27,118,0.15);
+  border-bottom: 1px solid rgba(237,27,118,0.15);
+  box-shadow: none;
+  transition: border-color 0.4s, box-shadow 0.4s;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: hobbyIn 0.7s ease forwards;
+  counter-increment: hobbyCount;
+}
+.p_hobbies:nth-child(2) { animation-delay: 0.05s; }
+.p_hobbies:nth-child(3) { animation-delay: 0.15s; }
+.p_hobbies:nth-child(4) { animation-delay: 0.25s; }
+.p_hobbies:nth-child(5) { animation-delay: 0.35s; }
+
+.p_hobbies:hover {
+  box-shadow: 0 0 40px rgba(237,27,118,0.25), inset 0 0 60px rgba(237,27,118,0.04);
+  border-color: #ed1b76;
+  transform: none;
+}
+
+/* Coin haut-droit */
+.p_hobbies::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 14px; height: 14px;
+  border-top: 2px solid #ed1b76;
+  border-right: 2px solid #ed1b76;
+  z-index: 10;
+}
+/* Numéro participant en bas-droite */
+.p_hobbies::after {
+  content: 'PARTICIPANT N° 0' counter(hobbyCount);
+  position: absolute;
+  bottom: 8px; right: 12px;
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(237,27,118,0.4);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ── Photo ── */
+.photo_hobbie {
+  height: 260px;
+  position: relative;
   overflow: hidden;
 }
+/* Scanlines */
+.photo_hobbie::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(0,0,0,0.07) 3px, rgba(0,0,0,0.07) 4px
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+/* Coin bas-gauche photo */
+.photo_hobbie::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 14px; height: 14px;
+  border-bottom: 2px solid #ed1b76;
+  border-left: 2px solid rgba(237,27,118,0.6);
+  z-index: 5;
+}
+
+.img_hobbies {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.85;
+  filter: brightness(0.8) saturate(0.9);
+  transition: 0.5s ease transform, 0.5s ease filter;
+}
+.p_hobbies:hover .img_hobbies {
+  transform: scale(1.07);
+  filter: brightness(0.95) saturate(1.1);
+}
+
+/* ── Titre ── */
+.titre_hobbies {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  z-index: 4;
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #ed1b76;
+  text-shadow: 0 0 12px rgba(237,27,118,0.9);
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 60%, transparent);
+}
+
+/* ── Contenu ── */
 .swip {
-  padding: 10px 20px;
+  padding: 14px 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .swip > p {
-  margin: 0;
-  padding: 16px 0;
-  margin-bottom: 1px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.6px;
+  line-height: 1.6;
+  border-left: 2px solid rgba(237,27,118,0.35);
+  padding: 6px 10px;
+  margin: 0 0 10px;
+  background: rgba(237,27,118,0.03);
+}
+
+/* ── Animations ── */
+@keyframes hobbyIn {
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(237,27,118,0.3); }
+  50%       { box-shadow: 0 0 18px rgba(237,27,118,0.7); }
 }
 .gridR2 {
   display: grid;
