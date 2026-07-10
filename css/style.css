@@ -1663,6 +1663,12 @@ li {
   padding: 28px 0 10px;
 }
 
+/* Loader en haut de chaque section */
+.squid-game.squid-section {
+  padding: 18px 0 6px;
+  width: 100%;
+}
+
 .squid-game .loader {
   width: 80px;
   height: 80px;
