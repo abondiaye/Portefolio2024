@@ -4,7 +4,7 @@
     {
       "name": "portfolio-php",
       "runtimeExecutable": "php",
-      "runtimeArgs": ["-S", "localhost:8080"],
+      "runtimeArgs": ["-S", "localhost:8080", "-t", "/Users/abdoulayendiaye/Development/Portefolio2024-main"],
       "port": 8080
     }
   ]

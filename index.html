@@ -311,11 +311,11 @@
           <div class="loader"><svg viewBox="0 0 80 80"><defs><path id="sp1" d="M8,8 L72,8 L72,72 L8,72 Z"/></defs><rect x="8" y="8" width="64" height="64"></rect><circle class="dot" cx="0" cy="0" r="4" fill="white"><animateMotion dur="3s" repeatCount="indefinite" begin="2s"><mpath href="#sp1"/></animateMotion></circle></svg></div>
         </div>
         <!-- Photo profil -->
-        <div class="circle heptagone">
+        <div class="heptagone">
           <img
             loading="lazy"
             class="heptagone flex_home home_index"
-            src="asset/profil.jpg"
+            src="asset/profil.png"
             alt="photo de N'DIAYE Abdoulaye"
           />
         </div>
@@ -327,10 +327,11 @@
           </h1>
           <p class="inline_flex intro">
             <span
-              >9 ans d'expérience en support utilisateurs, Active Directory et
-              déploiement de postes Windows,&nbsp;</span
+              >10 ans d'expérience en support utilisateurs, réseaux (GLPI,
+              ITIL, ServiceNow), Active Directory et déploiement de postes
+              Windows,&nbsp;</span
             >
-            <span>doublée d'une compétence en développement web Fullstack [PHP | Javascript]&nbsp;</span>
+            <span>doublée d'une compétence en développement web Fullstack [PHP | Symfony | Vue.js | Javascript]&nbsp;</span>
             <span>pour résoudre les problèmes sous tous les angles.</span>
           </p>
         </div>
@@ -385,6 +386,27 @@
               <img loading="lazy" src="asset/logo/10127.png" alt="logo mail" />
             </div>
             <a href="#contact" title="Accéder à la page contact">Mail</a>
+          </div>
+          <!-- CV -->
+          <div class="lien_contact" tabindex="1">
+            <div class="icone_left bg_black borderL">
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Télécharger le CV</title>
+                <path
+                  d="M12 2a1 1 0 0 1 1 1v10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 1 1 1.414-1.414L11 13.586V3a1 1 0 0 1 1-1zM4 19a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"
+                />
+              </svg>
+            </div>
+            <a
+              href="asset/cv/CV_NDIAYE_Abdoulaye.pdf"
+              download="CV_NDIAYE_Abdoulaye.pdf"
+              title="Télécharger mon CV au format PDF"
+              >Télécharger CV</a
+            >
           </div>
         </div>
         <!-- Tools -->
@@ -781,6 +803,63 @@
           <div class="loader"><svg viewBox="0 0 80 80"><defs><path id="sp3" d="M8,8 L72,8 L72,72 L8,72 Z"/></defs><rect x="8" y="8" width="64" height="64"></rect><circle class="dot" cx="0" cy="0" r="4" fill="white"><animateMotion dur="3s" repeatCount="indefinite" begin="2s"><mpath href="#sp3"/></animateMotion></circle></svg></div>
         </div>
         <div id="formation_detail" class="timeline mt_5">
+          <!-- Renault Trucks / Volvo - Spot IT -->
+          <div class="container left">
+            <div class="content inline_flex p_projet shadow_purple">
+              <!-- Onglet -->
+              <span class="dateRight">06/2026 - Aujourd'hui</span>
+              <span class="dateRight durer">En cours</span>
+              <h3 class="titre_formation">
+                Technicien Support IT<br />Guichet informatique - Renault
+                Trucks Volvo, Saint-Priest
+              </h3>
+              <div class="onglet_formation onglet_double bg_purple">
+                <span class="logo_fond_noir">
+                  <img src="asset/projets/renault.png" alt="logo Renault Trucks" />
+                </span>
+                <img src="asset/formation/volvo.png" alt="logo Volvo" />
+              </div>
+              <p class="m_10">
+                Support utilisateurs en presentiel au guichet informatique du
+                site Volvo de Saint-Priest, avec suivi des incidents et
+                gestion du parc informatique.
+              </p>
+              <div class="m_10">
+                <h4>Missions :</h4>
+                <ul>
+                  <li>Support utilisateurs N1/N2 en face a face au guichet informatique</li>
+                  <li>Diagnostic et resolution d'incidents materiels et logiciels</li>
+                  <li>Gestion des tickets et suivi via GLPI, methodologie ITIL</li>
+                  <li>Administration de comptes et droits Active Directory</li>
+                  <li>Deploiement et configuration de postes Windows</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Formation DevOps - Udemy -->
+          <div class="container right">
+            <div class="content inline_flex p_projet shadow_purple">
+              <!-- Onglet -->
+              <span class="dateLeft">2026 - Aujourd'hui</span>
+              <span class="dateLeft durer">En cours</span>
+              <h3 class="titre_formation t_right">
+                Formation DevOps<br />Udemy (a distance)
+              </h3>
+              <p class="m_10">
+                Montee en competences en DevOps en autoformation a distance,
+                en parallele de l'activite professionnelle.
+              </p>
+              <div class="m_10">
+                <h4>Notions travaillees :</h4>
+                <ul>
+                  <li>Conteneurisation avec Docker</li>
+                  <li>Orchestration Kubernetes</li>
+                  <li>Integration et deploiement continu (CI/CD)</li>
+                  <li>Scripting et automatisation (Bash, Git)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <!-- BTS Formateur - IFPA -->
           <div id="formation" class="container left">
             <div class="content inline_flex p_projet shadow_purple">
@@ -1100,319 +1179,113 @@
           <div class="loader triangle"><svg viewBox="0 0 80 80"><defs><path id="tp4" d="M43,8 L79,72 L7,72 Z"/></defs><polygon points="43 8 79 72 7 72"></polygon><circle class="dot" cx="0" cy="0" r="4" fill="white"><animateMotion dur="3s" repeatCount="indefinite" begin="1s"><mpath href="#tp4"/></animateMotion></circle></svg></div>
           <div class="loader"><svg viewBox="0 0 80 80"><defs><path id="sp4" d="M8,8 L72,8 L72,72 L8,72 Z"/></defs><rect x="8" y="8" width="64" height="64"></rect><circle class="dot" cx="0" cy="0" r="4" fill="white"><animateMotion dur="3s" repeatCount="indefinite" begin="2s"><mpath href="#sp4"/></animateMotion></circle></svg></div>
         </div>
-        <!-- Cuisine -->
-        <div class="inline_flex p_hobbies bg_blackAlpha mt_0">
-          <div class="photo_hobbie">
-            <h3 class="titre_hobbies">Cuisine</h3>
-            <img
-              class="img_hobbies"
-              loading="lazy"
-              src="asset/hobbies/cuisine/IMG_0016.jpg"
-              alt="plats de cuisine"
-            />
-          </div>
+        <!-- Flip Cards Grid -->
+        <div class="hobbies-grid">
 
-          <div class="swip shadow_purple">
-            <p>
-              Après avoir obtenu 2 Titre: C.A.P CUISINE et TRAITEUR depuis 2003,
-              la cuisine reste toujours une passion.
-            </p>
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/cuisine/IMG_0059.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="Saint-jacques avec sa bisque"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/cuisine/IMG_0393.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="Gateau chocolat-passion"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/cuisine/IMG_1246.JPG"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="Gateau chocolat fuits-rouges"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/cuisine/IMG_1447.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="Donuts chocolat et caramel"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/cuisine/IMG_2480.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="Gateau Snickers"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/cuisine/IMG_0016.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="Foies gras saveur d'automne"
-                  />
+          <!-- Cuisine -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="asset/hobbies/cuisine/IMG_0016.jpg" loading="lazy" alt="Cuisine" />
+                <span class="fc-hint">survol →</span>
+                <div class="fc-title">
+                  <h3>Cuisine</h3>
+                  <span>Passion culinaire</span>
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Photographie -->
-        <div class="inline_flex p_hobbies bg_blackAlpha">
-          <div class="photo_hobbie">
-            <h3 class="titre_hobbies">FiveToFive</h3>
-            <h1>Le Foot en salle</h1>
-            <img
-              class="img_hobbies"
-              loading="lazy"
-              src="asset/hobbies/photographie/IMG_1212.jpg"
-              alt="fleurs de cerisiers"
-            />
-          </div>
-          <div class="swip shadow_purple">
-            <p>J'aime nos district urbains et accompagner nos petit frére</p>
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrFivapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_0550.JPG"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="ancienne université de Grenoble"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/003.JPG"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="arbre sous néons vert"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_0743.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="écurieul à London Park"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_0941.jpeg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="immeuble à Lisbonne"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_0021.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="arbre dans la brume"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_0568.JPG"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="ancienne université de Grenoble"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_0975.jpeg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="cote de Casquay"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_1123.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="mer de nuages en montagne"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_1388.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="acote de bretagne à Quiberon"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/001.JPG"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="bois mort dans un lac à Plitwitch"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/photographie/IMG_1212.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="fleurs de cerisiers"
-                  />
+              <div class="flip-card-back">
+                <h3>Cuisine</h3>
+                <p>Après avoir obtenu 2 titres — C.A.P CUISINE et TRAITEUR depuis 2003, la cuisine reste toujours une passion.</p>
+                <div class="fc-gallery">
+                  <img src="asset/hobbies/cuisine/IMG_0059.jpg" loading="lazy" alt="Saint-jacques" />
+                  <img src="asset/hobbies/cuisine/IMG_0393.jpg" loading="lazy" alt="Gâteau chocolat" />
+                  <img src="asset/hobbies/cuisine/IMG_1246.JPG" loading="lazy" alt="Gâteau fruits rouges" />
+                  <img src="asset/hobbies/cuisine/IMG_1447.jpg" loading="lazy" alt="Donuts" />
+                  <img src="asset/hobbies/cuisine/IMG_2480.jpg" loading="lazy" alt="Gâteau Snickers" />
+                  <img src="asset/hobbies/cuisine/IMG_0016.jpg" loading="lazy" alt="Foie gras" />
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-scrollbar"></div>
             </div>
           </div>
-        </div>
 
-        <!-- Metier Mobiles -->
-        <div class="inline_flex p_hobbies bg_blackAlpha">
-          <div class="photo_hobbie">
-            <h3 class="titre_hobbies">
-              Metier de l'informatique et de la telephonie
-            </h3>
-            <img
-              class="img_hobbies"
-              loading="lazy"
-              src="asset/hobbies/bois/572.JPG"
-              alt="plats de cuisine"
-            />
-          </div>
-          <div class="swip shadow_purple">
-            <p>Par curiosité, je monte et démonte les telephone .</p>
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/bois/Photo-0004k.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="table basse en chataigné"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/bois/IMG_0332.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="table en chêne d'ancien fût"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/bois/IMG_1232.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="mise à niveau de la table d'armoni d'une guitare"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/bois/IMG_1900.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="amenagement d'un forgon en van"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/bois/IMG_0108.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="réfection d'un fauteuil"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/bois/572.JPG"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="guitare en chêne"
-                  />
+          <!-- FiveToFive -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="asset/hobbies/photographie/IMG_1212.jpg" loading="lazy" alt="FiveToFive" />
+                <span class="fc-hint">survol →</span>
+                <div class="fc-title">
+                  <h3>FiveToFive</h3>
+                  <span>Le Foot en salle</span>
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bénévolat SIF -->
-        <div class="inline_flex p_hobbies bg_blackAlpha">
-          <div class="photo_hobbie">
-            <h3 class="titre_hobbies">Bénévolat - Association SIF</h3>
-            <img
-              class="img_hobbies"
-              loading="lazy"
-              src="asset/hobbies/sif/cours_informatique.jpg"
-              alt="cours d'informatique à des seniors"
-            />
-          </div>
-          <div class="swip shadow_purple">
-            <p>
-              Bénévole au sein de l'association <b>SIF</b>, où je donne des
-              cours d'informatique en plus de participer à la
-              <b>distribution alimentaire</b>.
-            </p>
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/sif/cours_informatique.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="cours d'informatique à des seniors"
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="asset/hobbies/sif/distribution_alimentaire.jpg"
-                    loading="lazy"
-                    class="swipper_img"
-                    alt="distribution alimentaire par des bénévoles"
-                  />
+              <div class="flip-card-back">
+                <h3>FiveToFive — Foot en salle</h3>
+                <p>J'aime nos districts urbains et accompagner nos petits frères dans leurs compétitions de foot en salle.</p>
+                <div class="fc-gallery">
+                  <img src="asset/hobbies/photographie/IMG_0550.JPG" loading="lazy" alt="Match" />
+                  <img src="asset/hobbies/photographie/003.JPG" loading="lazy" alt="Match" />
+                  <img src="asset/hobbies/photographie/IMG_0743.jpg" loading="lazy" alt="Match" />
+                  <img src="asset/hobbies/photographie/IMG_0941.jpeg" loading="lazy" alt="Match" />
+                  <img src="asset/hobbies/photographie/IMG_1123.jpg" loading="lazy" alt="Match" />
+                  <img src="asset/hobbies/photographie/IMG_1212.jpg" loading="lazy" alt="Match" />
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-scrollbar"></div>
             </div>
           </div>
+
+          <!-- Informatique & Téléphonie -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="asset/hobbies/bois/572.JPG" loading="lazy" alt="Informatique" />
+                <span class="fc-hint">survol →</span>
+                <div class="fc-title">
+                  <h3>Informatique &amp; Téléphonie</h3>
+                  <span>Démontage &amp; réparation</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h3>Informatique &amp; Téléphonie</h3>
+                <p>Par curiosité et passion, je démonte et répare téléphones et ordinateurs — toujours à la recherche de comment ça fonctionne.</p>
+                <div class="fc-gallery">
+                  <img src="asset/hobbies/bois/Photo-0004k.jpg" loading="lazy" alt="Réparation" />
+                  <img src="asset/hobbies/bois/IMG_0332.jpg" loading="lazy" alt="Démontage" />
+                  <img src="asset/hobbies/bois/IMG_1232.jpg" loading="lazy" alt="Tech" />
+                  <img src="asset/hobbies/bois/IMG_1900.jpg" loading="lazy" alt="Tech" />
+                  <img src="asset/hobbies/bois/IMG_0108.jpg" loading="lazy" alt="Tech" />
+                  <img src="asset/hobbies/bois/572.JPG" loading="lazy" alt="Tech" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bénévolat SIF -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="asset/hobbies/sif/cours_informatique.jpg" loading="lazy" alt="Bénévolat SIF" />
+                <span class="fc-hint">survol →</span>
+                <div class="fc-title">
+                  <h3>Bénévolat — SIF</h3>
+                  <span>Association solidarité</span>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h3>Bénévolat — Association SIF</h3>
+                <p>Bénévole au sein de l'association <b>SIF</b>, où je donne des cours d'informatique à des seniors et participe à la <b>distribution alimentaire</b>.</p>
+                <div class="fc-gallery">
+                  <img src="asset/hobbies/sif/cours_informatique.jpg" loading="lazy" alt="Cours informatique" />
+                  <img src="asset/hobbies/sif/distribution_alimentaire.jpg" loading="lazy" alt="Distribution alimentaire" />
+                  <img src="asset/hobbies/sif/cours_informatique.jpg" loading="lazy" alt="Cours" />
+                  <img src="asset/hobbies/sif/distribution_alimentaire.jpg" loading="lazy" alt="Distribution" />
+                  <img src="asset/hobbies/sif/cours_informatique.jpg" loading="lazy" alt="Seniors" />
+                  <img src="asset/hobbies/sif/distribution_alimentaire.jpg" loading="lazy" alt="Solidarité" />
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Musique
@@ -1436,6 +1309,19 @@
           <div class="p_contact_fin presentation t_center">
             <h2>N'hésitez pas à me contacter,</h2>
             <p>je suis à votre disposition pour plus d'informations.</p>
+
+            <!-- Photo de fin -->
+            <div class="photo_fin">
+              <img
+                loading="lazy"
+                src="asset/la-vie.jpg"
+                alt="Abdoulaye et son fils, face à la mer"
+              />
+              <p class="legende_fin">
+                Ce qui compte le plus, au-delà du code.
+              </p>
+            </div>
+
             <!-- Loader Squid Game -->
             <div class="squid-game">
               <!-- Cercle -->
