@@ -629,47 +629,64 @@ function requetteXhttp(adresse,emplacement) {
   xhttp.send();
 }
 
-// Mail()
+// Mail() - envoi via FormSubmit (site hebergé en statique sur GitHub Pages, pas de PHP disponible)
 envoyer_mail.addEventListener("click", function() {
 
   if(grecaptcha.getResponse() == ""){
-    console.log(grecaptcha.getResponse())
-
     document.getElementById('alert').innerHTML = "Veuillez cocher le captcha"
     show(document.getElementById('alert'))
     document.getElementById('alert').classList.remove('success')
     document.getElementById('alert').classList.add('danger')
     return
   }
-  console.log(grecaptcha.getResponse())
-  console.log('ok')
-  var xhr = new XMLHttpRequest();
-  var url = "php/mail.php";
+
   emails = email.value;
   message = contact_fin.value;
-  demandeCv = document.getElementById('demande_cv').checked ? "1" : "0";
-  var params = "email=" + encodeURIComponent(emails) + "&message=" + encodeURIComponent(message) + "&demande_cv=" + demandeCv;
+  demandeCv = document.getElementById('demande_cv').checked;
 
-  xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  var sujet = demandeCv
+    ? "Portfolio - Demande de CV de " + emails
+    : "Portfolio - Nouveau message de " + emails;
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      // alert(xhr.responseText);
+  var corpsMessage = message;
+  if (demandeCv) {
+    corpsMessage += "\n\n--- Cette personne souhaite recevoir le CV par mail. ---";
+  }
+
+  fetch("https://formsubmit.co/ajax/a_ndiaye@outlook.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      email: emails,
+      message: corpsMessage,
+      _subject: sujet,
+      _captcha: "false"
+    })
+  })
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
       email.value = ""
       contact_fin.value = ""
       document.getElementById('demande_cv').checked = false
-      if(xhr.responseText == "Votre message c'est bien envoyé"){
+      grecaptcha.reset()
+      if (data.success == "true") {
         document.getElementById('alert').classList.add('success')
         document.getElementById('alert').classList.remove('danger')
-      }else{
+        document.getElementById('alert').innerHTML = "Votre message a bien été envoyé"
+      } else {
         document.getElementById('alert').classList.remove('success')
         document.getElementById('alert').classList.add('danger')
+        document.getElementById('alert').innerHTML = "Une erreur est survenue, veuillez réessayer plus tard"
       }
-      document.getElementById('alert').innerHTML = xhr.responseText
       show(document.getElementById('alert'))
-    }
-  };
-
-  xhr.send(params);
+    })
+    .catch(function() {
+      document.getElementById('alert').classList.remove('success')
+      document.getElementById('alert').classList.add('danger')
+      document.getElementById('alert').innerHTML = "Une erreur est survenue, veuillez réessayer plus tard"
+      show(document.getElementById('alert'))
+    });
 });
